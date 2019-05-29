@@ -1,10 +1,5 @@
 <?php
 require('../admin/coon.php');
-//操作数据库
-$sql='select content,lastdate from message order by id desc';
-$rel=mysqli_query($coon,$sql) or die('操作失败'.mysqli_error($coon));
-
-
 
 ?>
 
@@ -96,6 +91,9 @@ $rel=mysqli_query($coon,$sql) or die('操作失败'.mysqli_error($coon));
 					<div class="message" id="message">
 						<ul>
 						<?php 
+							//操作数据库
+							$sql='select content,lastdate from message order by id desc';
+							$rel=mysqli_query($coon,$sql) or die('操作失败'.mysqli_error($coon));						
 							while ($row=mysqli_fetch_array($rel)) {
 						?>
 							<li><?php echo $row[0];?></li><span><?php echo $row[1];?></span>
