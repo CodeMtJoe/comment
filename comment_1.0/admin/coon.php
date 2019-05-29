@@ -1,0 +1,9 @@
+<?php
+require('function.php');
+//数据库配置信息
+$db_host='localhost';
+$db_user='root';
+$db_pwd='root';
+$db_name='userdb';
+$coon=getLink($db_host,$db_user,$db_pwd,$db_name);
+?>
